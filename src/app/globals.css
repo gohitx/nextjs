@@ -120,7 +120,7 @@ body {
   height: 37px;
   place-items: center;
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 50%;
   background: transparent;
   color: var(--foreground);
   cursor: pointer;
@@ -200,7 +200,6 @@ body {
   .theme-toggle {
     width: 32px;
     height: 32px;
-    border-radius: 10px;
   }
 }
 
