@@ -61,6 +61,11 @@ body {
 
 .brand-mark {
   flex: none;
+  height: auto;
+}
+
+:root[data-theme="light"] .brand-mark {
+  filter: brightness(0);
 }
 
 .primary-nav {
