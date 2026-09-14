@@ -1,3 +1,7 @@
+export const SITE = {
+  name: 'test-3',
+} as const;
+
 export const navigation = [
   { href: '/', label: 'Home' },
   { href: '/work', label: 'Work' },
