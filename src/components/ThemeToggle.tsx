@@ -16,7 +16,7 @@ export default function ThemeToggle() {
 
   return (
     <button
-      className="relative grid size-[37px] cursor-pointer place-items-center rounded-full border border-[#303030] bg-transparent text-foreground [transition:transform_150ms_ease] hover:-translate-y-px hover:bg-[color-mix(in_srgb,var(--foreground)_9%,transparent)] hover:text-[#f3f3f3] active:scale-[0.94] focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-4 group-data-[theme=light]/theme:border-[#dedede] group-data-[theme=light]/theme:hover:text-[#171717] motion-reduce:[transition-duration:0.01ms] max-[600px]:size-8"
+      className="relative grid size-[37px] cursor-pointer place-items-center rounded-full border border-border bg-transparent text-foreground [transition:transform_150ms_ease] hover:-translate-y-px hover:bg-[color-mix(in_srgb,var(--foreground)_9%,transparent)] hover:text-[#f3f3f3] active:scale-[0.94] focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-4 group-data-[theme=light]/theme:hover:text-[#171717] motion-reduce:[transition-duration:0.01ms] max-[600px]:size-8"
       type="button"
       onClick={toggleTheme}
       aria-pressed={isLight}

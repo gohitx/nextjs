@@ -10,7 +10,7 @@ const navigation = [
 
 export default function Header() {
   return (
-    <header className="h-[73px] border-t border-[#303030] group-data-[theme=light]/theme:border-[#dedede]">
+    <header className="h-[73px] border-t border-border">
       <div className="mx-auto grid h-full w-[min(calc(100%-40px),1152px)] grid-cols-[1fr_auto_1fr] items-center max-[600px]:w-[min(calc(100%-24px),1152px)]">
         <Link
           className="flex w-fit items-center gap-[11px] text-base font-bold text-foreground hover:text-[#f3f3f3] focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-4 group-data-[theme=light]/theme:hover:text-[#171717] max-[600px]:gap-[5px] max-[600px]:text-[13px]"
