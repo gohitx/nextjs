@@ -1,9 +1,46 @@
 import { SocialMedia } from "@/src/components/icons/social-media";
-import { socials } from "@/src/consts";
 
 interface GXBProps {
   text: string;
 }
+
+const socials = [
+  {
+    href: "https://x.com/intent/follow?screen_name=gohitx",
+    icon: SocialMedia.Twitter,
+    label: "X (Twitter)",
+  },
+  {
+    href: "https://github.com/gohitx",
+    icon: SocialMedia.GitHubThin,
+    label: "GitHub",
+  },
+  {
+    href: "https://linkedin.com/in/gohitx",
+    icon: SocialMedia.Linkedin,
+    label: "LinkedIn",
+  },
+  {
+    href: "https://instagram.com/gohitx",
+    icon: SocialMedia.Instagram,
+    label: "Instagram",
+  },
+  {
+    href: "https://www.youtube.com/@gohitx?sub_confirmation=1",
+    icon: SocialMedia.YouTube,
+    label: "YouTube",
+  },
+  {
+    href: "https://tiktok.com/@gohitx",
+    icon: SocialMedia.Tiktok,
+    label: "TikTok",
+  },
+  {
+    href: "https://facebook.com/gohitx",
+    icon: SocialMedia.Facebook,
+    label: "Facebook",
+  },
+];
 
 const logo = ` ██████╗ ██╗  ██╗██████╗
 ██╔════╝ ╚██╗██╔╝██╔══██╗
@@ -27,10 +64,7 @@ export default function GXB({ text }: GXBProps) {
       </p>
 
       <div className="mt-2 flex items-center justify-center gap-8 max-[400px]:gap-4">
-        {socials.map(({ href, icon, label }) => {
-          const Icon = SocialMedia[icon];
-
-          return (
+        {socials.map(({ href, icon: Icon, label }) => (
             <a
               key={href}
               className="flex size-6 items-center justify-center text-[#9b9b9b] transition-transform duration-200 ease-in-out hover:[transform:translateY(-2px)] hover:text-foreground focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-4 group-data-[theme=light]/theme:text-[#6b6b6b] group-data-[theme=light]/theme:hover:text-foreground motion-reduce:transition-none"
@@ -41,8 +75,7 @@ export default function GXB({ text }: GXBProps) {
             >
               <Icon className="size-full" aria-hidden="true" focusable="false" />
             </a>
-          );
-        })}
+        ))}
       </div>
     </section>
   );

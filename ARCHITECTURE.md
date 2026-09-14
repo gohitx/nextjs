@@ -21,7 +21,7 @@ src/
 │       ├── Header.tsx
 │       ├── Footer.tsx
 │       └── GXB.tsx
-└── consts.ts                   Site metadata, navigation, and social links
+└── consts.ts                   Site metadata and navigation
 ```
 
 ## Responsibilities
@@ -29,7 +29,7 @@ src/
 - The root layout owns the document language, font, metadata defaults, initial theme, and skip link.
 - Workspace pages share the header and footer. Auth examples only use the root layout. Route groups do not enforce authentication.
 - Pages and layouts remain Server Components. Header uses `usePathname` for active navigation; ThemeToggle handles the browser theme and persistence.
-- `consts.ts` contains serializable public configuration. Social icon names are resolved by GXB; the header does not import the SVG catalog.
+- `consts.ts` contains public site configuration. GXB keeps its own social URLs and imports only the icons it renders.
 - `globals.css` contains theme tokens and document styles. Tailwind utilities for individual components stay in their TSX files.
 
 ## Growing the template
