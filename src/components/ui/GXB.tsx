@@ -67,7 +67,7 @@ export default function GXB({ text }: GXBProps) {
         {socials.map(({ href, icon: Icon, label }) => (
           <a
             key={href}
-            className="flex size-6 items-center justify-center text-[#9b9b9b] transition-[color,transform] duration-200 ease-in-out hover:-translate-y-0.5 hover:text-foreground focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-4 group-data-[theme=light]/theme:text-[#6b6b6b]"
+            className="flex size-6 items-center justify-center text-[#9b9b9b] transition-[color,transform] duration-200 ease-in-out hover:[transform:translateY(-2px)] hover:text-foreground focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-4 group-data-[theme=light]/theme:text-[#6b6b6b]"
             href={href}
             target="_blank"
             rel="noopener noreferrer"
