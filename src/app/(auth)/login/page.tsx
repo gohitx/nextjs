@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = { title: "Work" };
+export const metadata: Metadata = { title: "Login" };
 
-export default function WorkPage() {
+export default function LoginPage() {
   return (
     <main className="grid flex-1 place-items-center p-6">
-      <h1>hello Work</h1>
+      <h1>hello Login</h1>
     </main>
   );
 }

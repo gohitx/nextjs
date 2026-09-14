@@ -8,7 +8,10 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "test-3",
+  title: {
+    default: "test-3",
+    template: "%s | test-3",
+  },
   description: "A simple portfolio template.",
 };
 
