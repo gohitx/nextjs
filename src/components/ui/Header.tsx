@@ -1,10 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { authNavigation } from "@/src/consts";
+import { usePathname } from "next/navigation";
+import { authNavigation, navigation } from "@/src/consts";
 import ThemeToggle from "../ThemeToggle";
-import Navigation from "./Navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="shrink-0 border-t border-border">
       <div className="mx-auto grid min-h-[72px] w-[min(calc(100%-40px),1152px)] grid-cols-[auto_1fr] items-center gap-x-4 py-2 md:grid-cols-[1fr_auto_1fr] md:py-0 max-[600px]:w-[min(calc(100%-24px),1152px)]">
@@ -24,13 +28,33 @@ export default function Header() {
           <span>test-3</span>
         </Link>
 
-        <Navigation />
+        <nav
+          className="col-span-2 row-start-2 flex items-center justify-center gap-7 md:col-span-1 md:col-start-2 md:row-start-1 max-[600px]:gap-3"
+          aria-label="Main navigation"
+        >
+          {navigation.map(({ href, label }) => {
+            const isActive = pathname === href;
 
-        <div className="col-start-2 row-start-1 flex items-center justify-end gap-2 md:col-start-3">
+            return (
+              <Link
+                key={href}
+                className={`flex min-h-11 items-center text-base font-medium transition-colors duration-150 hover:text-foreground focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-4 motion-reduce:transition-none max-[600px]:text-[13px] ${
+                  isActive ? "text-foreground" : "text-foreground/55"
+                }`}
+                href={href}
+                aria-current={isActive ? "page" : undefined}
+              >
+                {label}
+              </Link>
+            );
+          })}
+        </nav>
+
+        <div className="col-start-2 row-start-1 flex items-center justify-end gap-4 md:col-start-3 max-[600px]:gap-3">
           {authNavigation.map(({ href, label }) => (
             <Link
               key={href}
-              className="flex min-h-11 items-center rounded-md border border-border px-3 text-sm font-medium text-foreground hover:bg-[color-mix(in_srgb,var(--foreground)_9%,transparent)] focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-4 max-[600px]:px-2 max-[600px]:text-[13px]"
+              className="flex min-h-11 items-center text-sm font-medium text-foreground/55 transition-colors duration-150 hover:text-foreground focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-4 motion-reduce:transition-none max-[600px]:text-[13px]"
               href={href}
             >
               {label}
