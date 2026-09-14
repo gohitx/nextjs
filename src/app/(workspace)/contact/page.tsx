@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import GXB from "@/src/components/ui/GXB";
 
 export const metadata: Metadata = { title: "Contact" };
 
 export default function ContactPage() {
   return (
-    <main className="grid flex-1 place-items-center p-6">
-      <h1>hello Contact</h1>
+    <main className="flex flex-1">
+      <h1 className="sr-only">Contact</h1>
+      <GXB text="Contact — get in touch or drop your details here." />
     </main>
   );
 }
