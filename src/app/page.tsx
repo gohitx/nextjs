@@ -1,4 +1,4 @@
-import Header from "@/src/components/ui/Header";
+import Header from '@/src/components/ui/Header';
 
 export default function Home() {
   return (
@@ -6,6 +6,87 @@ export default function Home() {
       <Header />
       <main id="home" className="flex-1">
         <h1 className="sr-only">Home</h1>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
+        <h2>heheheheh</h2>
       </main>
     </>
   );
