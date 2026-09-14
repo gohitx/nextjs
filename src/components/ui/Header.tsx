@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { authNavigation, navigation } from "@/src/consts";
-import ThemeToggle from "../ThemeToggle";
+import { SITE, authNavigation, navigation } from "@/src/consts";
+import ThemeToggle from "@/src/components/ThemeToggle";
 
 export default function Header() {
   const pathname = usePathname();
@@ -15,7 +15,7 @@ export default function Header() {
         <Link
           className="flex w-fit items-center gap-[11px] text-base font-bold text-foreground hover:text-[#f3f3f3] focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-4 group-data-[theme=light]/theme:hover:text-[#171717] max-[600px]:gap-[5px] max-[600px]:text-[13px]"
           href="/"
-          aria-label="test-3 home"
+          aria-label={`${SITE.name} home`}
         >
           <Image
             className="h-auto shrink-0 group-data-[theme=light]/theme:brightness-0 max-[600px]:w-[17px]"
@@ -25,7 +25,7 @@ export default function Header() {
             height={19}
             loading="eager"
           />
-          <span>test-3</span>
+          <span>{SITE.name}</span>
         </Link>
 
         <nav
@@ -38,8 +38,8 @@ export default function Header() {
             return (
               <Link
                 key={href}
-                className={`flex min-h-11 items-center text-base font-medium transition-colors duration-150 hover:text-foreground focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-4 motion-reduce:transition-none max-[600px]:text-[13px] ${
-                  isActive ? "text-foreground" : "text-foreground/55"
+                className={`flex min-h-11 items-center text-base font-medium hover:text-foreground focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-4 max-[600px]:text-[13px] ${
+                  isActive ? "text-foreground" : "text-foreground/65"
                 }`}
                 href={href}
                 aria-current={isActive ? "page" : undefined}
@@ -54,7 +54,7 @@ export default function Header() {
           {authNavigation.map(({ href, label }) => (
             <Link
               key={href}
-              className="flex min-h-11 items-center text-sm font-medium text-foreground/55 transition-colors duration-150 hover:text-foreground focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-4 motion-reduce:transition-none max-[600px]:text-[13px]"
+              className="flex min-h-11 items-center text-sm font-medium text-foreground/65 hover:text-foreground focus-visible:outline-2 focus-visible:outline-current focus-visible:outline-offset-4 max-[600px]:text-[13px]"
               href={href}
             >
               {label}

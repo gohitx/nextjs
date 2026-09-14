@@ -6,6 +6,12 @@ export default function ThemeToggle() {
   function toggleTheme() {
     const root = document.documentElement;
     root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
+
+    try {
+      localStorage.setItem("theme", root.dataset.theme);
+    } catch {
+      // Theme switching still works when browser storage is unavailable.
+    }
   }
 
   return (
